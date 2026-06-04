@@ -15,7 +15,16 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("✅ AI Todo List")
+st.markdown("""
+<div style='text-align:center;padding:20px'>
+    <h1 style='font-size:48px;color:#38bdf8'>
+        AI Todo List
+    </h1>
+    <p style='font-size:18px;color:#cbd5e1'>
+        Organize tasks manually or let AI create your roadmap.
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
 tab1, tab2 = st.tabs(
     [
@@ -172,3 +181,84 @@ with tab2:
                 )
 
                 st.rerun()
+                
+st.markdown("""
+<style>
+
+/* Main background */
+.stApp {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+}
+
+/* Title */
+h1 {
+    text-align: center;
+    color: #38bdf8 !important;
+    font-weight: 700;
+}
+
+/* Cards */
+[data-testid="stVerticalBlock"] > div {
+    border-radius: 15px;
+}
+
+/* Buttons */
+.stButton > button {
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #3b82f6
+    );
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.stButton > button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(59,130,246,0.4);
+}
+
+/* Input boxes */
+.stTextInput input,
+.stTextArea textarea {
+    border-radius: 12px !important;
+    border: 2px solid #334155 !important;
+    background-color: #1e293b !important;
+    color: white !important;
+}
+
+/* Tabs */
+.stTabs [data-baseweb="tab"] {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+.stTabs [aria-selected="true"] {
+    background-color: #0ea5e9 !important;
+    color: white !important;
+}
+
+/* Checkbox text */
+.stCheckbox label {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Success messages */
+.stSuccess {
+    border-radius: 10px;
+}
+
+/* Info boxes */
+.stAlert {
+    border-radius: 10px;
+}
+
+</style>
+""", unsafe_allow_html=True)                
