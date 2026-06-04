@@ -11,7 +11,7 @@ from groq_ai import generate_tasks
 
 st.set_page_config(
     page_title="AI Todo List",
-    page_icon="✅",
+    
     layout="wide"
 )
 
